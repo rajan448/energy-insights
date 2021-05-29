@@ -64,5 +64,5 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Test Projects
+      - name: Lint workspace and projects
         run: pnpm lint
