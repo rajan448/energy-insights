@@ -1,0 +1,7 @@
+pnpm init nx-workspace energy-insight0s --npm-scope=synrg-insights --preset=empty --nx-cloud=true --package-manager=pnpm
+pnpm format
+pnpm install @nrwl/angular
+nx generate @nrwl/angular:init
+
+
+

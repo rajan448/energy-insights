@@ -1,8 +1,4 @@
 {
-  "npmScope": "synrg-insights",
-  "affected": {
-    "defaultBase": "master"
-  },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
@@ -10,18 +6,28 @@
     },
     ".eslintrc.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "synrg-insights",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "MzliMTE1OTctMjVhOS00ZTgzLTk0MTctMjczOGIxNDdjYWY0fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": true,
+        "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "energy-insights-app": {
+      "tags": ["type:app"]
+    },
+    "energy-insights-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["energy-insights-app"]
+    }
+  }
 }
